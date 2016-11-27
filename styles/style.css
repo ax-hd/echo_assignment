@@ -1,0 +1,194 @@
+#app{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  background:
+}
+
+body{
+  width: 100%;
+  height: 100%;
+  background: #fafafa;
+}
+
+.dv-search-container{
+  margin: 20px;
+  /* flex-basis: 400px; */
+  flex-direction: column;
+  flex-grow: 1;
+  width: 50%;
+  position: absolute;
+}
+
+#txt-search-bar{
+  flex: 1;
+  border: 1px solid #DDDDDD;
+  border-radius: 5px;
+  min-height: 30px;
+  width: 100%;
+  background-color: rgb(238,238,238);
+  box-shadow: 1px 1px #ddd;
+  font-weight: bold;
+  font-size: 22px;
+  padding: 5px;
+}
+
+#ul-suggestions-container{
+  padding-left: 0;
+  margin-top: 0;
+  margin-top: 2px;
+  border-radius: 5px;
+  flex-direction: column;
+  position: absolute;
+  display: flex;
+  width: 100%;
+  background: #FFF;
+}
+
+.li-suggestion{
+  list-style: none;
+  padding: 5px;
+  justify-content: left;
+  text-align:left;
+  border-bottom: 1px solid #DDDDDD;
+  cursor: pointer;
+}
+
+.li-suggestion:hover {
+  background: #EFEFEF;
+}
+
+.expanded {
+  border-top: 1px solid #DDDDDD;
+  border-left: 1px solid #DDDDDD;
+  border-right: 1px solid #DDDDDD;
+}
+
+.collapsed {
+  border: none;
+}
+
+.notification-message{
+  min-height: 100px;
+  min-width: 100px;
+  max-width: 50%;
+  background: #00ffff;
+  flex: 1 1;
+  flex-direction: column;
+  display: flex;
+  line-height: 100px;
+  border-radius: 10px;
+}
+
+.notification-container {
+    flex-grow: 1;
+    position: absolute;
+    justify-content: center;
+    width: 99%;
+    flex-flow: row wrap;
+    /* flex-basis: 100%; */
+    align-items: stretch;
+    display: flex;
+    top: -100px;
+    color:#FFF
+}
+
+.notification-drop{
+  animation-name: notification-drop-animation;
+  animation-duration: 5s;
+}
+
+.dv-event-container {
+    display: flex;
+    margin-top: 80px;
+    flex-direction: column;
+}
+
+.dv-event-container ul {
+  margin: 5px;
+}
+
+.dv-event-container ul li{
+  color: #FFF;
+  list-style: none;
+}
+
+.dv-event-container .button {
+    /* flex: 1 1 50px; */
+  width: 100px;
+  height: 40px;
+  display: flex;
+  margin: 5px;
+  text-align: center;
+  font-size: 16px;
+  box-shadow: #ddd;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.edit-button{
+  background: rgb(0, 150, 136);
+    border: none;
+    border-radius: 2px;
+    color: #BFE4E0;
+    /* font-size: 16px; */
+    /* text-align: center; */
+    font-weight: bold;
+}
+
+.button-panel{
+    display: flex;
+    flex-direction: row;
+    padding-left: 40px;
+}
+
+#ul-hashtags li {
+    flex: 1 1 50px;
+    /* width: 50px; */
+    display: inline-flex;
+    text-align: center;
+    background-color: rgb(3, 169, 244);
+    padding: 1px 5px 1px 5px;
+    margin: 2px;
+}
+#ul-channel li{
+  flex: 1 1 50px;
+  /* width: 50px; */
+  display: inline-flex;
+  text-align: center;
+  padding: 1px 5px 1px 5px;
+  margin: 2px;
+  background-color: rgb(255, 87, 34);
+}
+#ul-time-place li{
+  flex: 1 1 50px;
+  /* width: 50px; */
+  display: inline-flex;
+  text-align: center;
+  padding: 1px 5px 1px 5px;
+  margin: 2px;
+}
+
+#ul-time-place span{
+    background-color: rgb(158, 158, 158);
+    margin: 2px;
+}
+
+.notification-message{
+  color: #000;
+  text-align: center;
+  font-size: 32px;
+}
+
+
+@keyframes notification-drop-animation {
+  0%   {top: -100px;}
+  20%  {top: 15px;}
+  23%  {top: 8px;}
+  25%  {top: 10px;}
+  88%  {top: 10px;}
+  90%  {top: 15px;}
+  100% {top: -100px;}
+
+}
